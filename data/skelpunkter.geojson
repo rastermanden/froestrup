@@ -1,0 +1,41 @@
+var skelpunkter =
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "latlon": "57°5'21.499\"N 8°57'4.457\"E", "latlon_degrees": "57.0893 degrees N 8.9512 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.951238176261706, 57.089305177094054 ] } },
+{ "type": "Feature", "properties": { "id": 2, "latlon": "57°5'21.464\"N 8°57'4.014\"E", "latlon_degrees": "57.0893 degrees N 8.9511 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.951114992287032, 57.089295516922597 ] } },
+{ "type": "Feature", "properties": { "id": 3, "latlon": "57°5'21.426\"N 8°57'3.533\"E", "latlon_degrees": "57.0893 degrees N 8.9510 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950981380815268, 57.089285035067306 ] } },
+{ "type": "Feature", "properties": { "id": 4, "latlon": "57°5'21.383\"N 8°57'2.987\"E", "latlon_degrees": "57.0893 degrees N 8.9508 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950829834666894, 57.089273153615451 ] } },
+{ "type": "Feature", "properties": { "id": 5, "latlon": "57°5'32.779\"N 8°56'49.933\"E", "latlon_degrees": "57.0924 degrees N 8.9472 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.947203479161505, 57.09243865417654 ] } },
+{ "type": "Feature", "properties": { "id": 6, "latlon": "57°5'36.793\"N 8°56'59.806\"E", "latlon_degrees": "57.0936 degrees N 8.9499 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.949946049037099, 57.093553634410611 ] } },
+{ "type": "Feature", "properties": { "id": 7, "latlon": "57°5'37.568\"N 8°57'1.758\"E", "latlon_degrees": "57.0938 degrees N 8.9505 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950488295556948, 57.093768866322691 ] } },
+{ "type": "Feature", "properties": { "id": 8, "latlon": "57°5'38.095\"N 8°57'2.985\"E", "latlon_degrees": "57.0939 degrees N 8.9508 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950829070401182, 57.093915348265099 ] } },
+{ "type": "Feature", "properties": { "id": 9, "latlon": "57°5'38.228\"N 8°57'3.263\"E", "latlon_degrees": "57.0940 degrees N 8.9509 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950906487284316, 57.093952093573066 ] } },
+{ "type": "Feature", "properties": { "id": 10, "latlon": "57°5'22.349\"N 8°57'15.308\"E", "latlon_degrees": "57.0895 degrees N 8.9543 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.954252210782792, 57.089541497607357 ] } },
+{ "type": "Feature", "properties": { "id": 11, "latlon": "57°5'22.171\"N 8°57'13.031\"E", "latlon_degrees": "57.0895 degrees N 8.9536 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.953619734714096, 57.089491910623103 ] } },
+{ "type": "Feature", "properties": { "id": 12, "latlon": "57°5'21.867\"N 8°57'9.149\"E", "latlon_degrees": "57.0894 degrees N 8.9525 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.952541462028021, 57.089407368901135 ] } },
+{ "type": "Feature", "properties": { "id": 13, "latlon": "57°5'21.638\"N 8°57'6.237\"E", "latlon_degrees": "57.0893 degrees N 8.9517 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.951732397743315, 57.089343933924866 ] } },
+{ "type": "Feature", "properties": { "id": 14, "latlon": "57°5'21.581\"N 8°57'5.509\"E", "latlon_degrees": "57.0893 degrees N 8.9515 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.951530346608857, 57.089328081185357 ] } },
+{ "type": "Feature", "properties": { "id": 15, "latlon": "57°5'21.538\"N 8°57'4.965\"E", "latlon_degrees": "57.0893 degrees N 8.9514 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.951379097092204, 57.089316227462426 ] } },
+{ "type": "Feature", "properties": { "id": 16, "latlon": "57°5'21.499\"N 8°57'4.457\"E", "latlon_degrees": "57.0893 degrees N 8.9512 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.951238176261706, 57.089305177094054 ] } },
+{ "type": "Feature", "properties": { "id": 17, "latlon": "57°5'16.080\"N 8°57'5.149\"E", "latlon_degrees": "57.0878 degrees N 8.9514 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.95143030184145, 57.087799882767044 ] } },
+{ "type": "Feature", "properties": { "id": 18, "latlon": "57°5'31.703\"N 8°56'47.113\"E", "latlon_degrees": "57.0921 degrees N 8.9464 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.946420342268661, 57.092139751077816 ] } },
+{ "type": "Feature", "properties": { "id": 19, "latlon": "57°5'32.655\"N 8°56'49.697\"E", "latlon_degrees": "57.0924 degrees N 8.9471 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.947138162065999, 57.092404220396553 ] } },
+{ "type": "Feature", "properties": { "id": 20, "latlon": "57°5'32.779\"N 8°56'49.933\"E", "latlon_degrees": "57.0924 degrees N 8.9472 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.947203479161505, 57.09243865417654 ] } },
+{ "type": "Feature", "properties": { "id": 21, "latlon": "57°5'21.383\"N 8°57'2.987\"E", "latlon_degrees": "57.0893 degrees N 8.9508 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950829834666894, 57.089273153615451 ] } },
+{ "type": "Feature", "properties": { "id": 22, "latlon": "57°5'17.156\"N 8°57'7.830\"E", "latlon_degrees": "57.0881 degrees N 8.9522 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.952174924854489, 57.088098829935525 ] } },
+{ "type": "Feature", "properties": { "id": 23, "latlon": "57°5'16.080\"N 8°57'5.149\"E", "latlon_degrees": "57.0878 degrees N 8.9514 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.95143030184145, 57.087799882767044 ] } },
+{ "type": "Feature", "properties": { "id": 24, "latlon": "57°5'30.386\"N 8°56'43.340\"E", "latlon_degrees": "57.0918 degrees N 8.9454 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.945372324801623, 57.091773891748886 ] } },
+{ "type": "Feature", "properties": { "id": 25, "latlon": "57°5'31.074\"N 8°56'45.405\"E", "latlon_degrees": "57.0920 degrees N 8.9459 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.945945825795802, 57.091964919899318 ] } },
+{ "type": "Feature", "properties": { "id": 26, "latlon": "57°5'15.346\"N 8°57'3.307\"E", "latlon_degrees": "57.0876 degrees N 8.9509 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950918647274518, 57.087596138440873 ] } },
+{ "type": "Feature", "properties": { "id": 27, "latlon": "57°5'14.658\"N 8°57'1.578\"E", "latlon_degrees": "57.0874 degrees N 8.9504 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950438463727162, 57.087405088974251 ] } },
+{ "type": "Feature", "properties": { "id": 28, "latlon": "57°5'30.386\"N 8°56'43.340\"E", "latlon_degrees": "57.0918 degrees N 8.9454 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.945372324801623, 57.091773891748886 ] } },
+{ "type": "Feature", "properties": { "id": 29, "latlon": "57°5'15.346\"N 8°57'3.307\"E", "latlon_degrees": "57.0876 degrees N 8.9509 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950918647274518, 57.087596138440873 ] } },
+{ "type": "Feature", "properties": { "id": 30, "latlon": "57°5'31.074\"N 8°56'45.405\"E", "latlon_degrees": "57.0920 degrees N 8.9459 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.945945825795802, 57.091964919899318 ] } },
+{ "type": "Feature", "properties": { "id": 31, "latlon": "57°5'31.703\"N 8°56'47.113\"E", "latlon_degrees": "57.0921 degrees N 8.9464 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.946420342268661, 57.092139751077816 ] } },
+{ "type": "Feature", "properties": { "id": 32, "latlon": "57°5'16.080\"N 8°57'5.149\"E", "latlon_degrees": "57.0878 degrees N 8.9514 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.95143030184145, 57.087799882767044 ] } },
+{ "type": "Feature", "properties": { "id": 33, "latlon": "57°5'15.346\"N 8°57'3.307\"E", "latlon_degrees": "57.0876 degrees N 8.9509 degrees E" }, "geometry": { "type": "Point", "coordinates": [ 8.950918647274518, 57.087596138440873 ] } }
+]
+}

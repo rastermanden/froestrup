@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Leaflet Locate</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.mapbox.css' rel='stylesheet' />
+<!--[if lt IE 9]>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.ie.css' rel='stylesheet' />
+<![endif]-->
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/css/font-awesome.min.css' rel='stylesheet' />
+
+
+<script src='data/skelpunkter.geojson'></script>
+<script src='data/ejendom.geojson'></script>
+<div id='map'></div>
+<script>
+
+
+var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+            maxZoom: 21
+         })
+
+var topomat = L.tileLayer('http://osmtools.septima.dk/mapproxy/tiles/1.0.0/kortforsyningen_topomat/EPSG3857/{z}/{x}/{y}.png', {
+            attribution: 'GST',
+            maxZoom: 22
+         })
+
+var ortofoto = L.tileLayer('http://osmtools.septima.dk/mapproxy/tiles/1.0.0/kortforsyningen_ortoforaar/EPSG3857/{z}/{x}/{y}.jpeg', {
+            attribution: 'GST',
+            maxZoom: 21
+         })
+
+ 
+var ejendomStyle = {
+    "color": "#FF0000",
+    "weight": 5,
+    "opacity": 0.65,
+    "fillOpacity":0,
+   "weight":2
+};
+
+var ejendomdata= L.geoJson(ejendom, {style: ejendomStyle})
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.latlon) {
+        layer.bindPopup(feature.properties.latlon);
+    }
+}
+var skelpunkterdata= L.geoJson(skelpunkter, {
+    onEachFeature: onEachFeature
+})
+
+
+
+var map = L.map('map',{
+	center: [57.089273153615451, 8.950829834666894],
+	 zoom: 16,
+	layers: [topomat,ejendomdata]	
+})
+
+var baseMaps = {
+    "Open Street Map": osm,
+    "Matrikel": topomat,
+    "Ortofoto": ortofoto	
+};
+
+var overlayMaps = {
+    "Ejendom": ejendomdata,
+    "Skelpunkter": skelpunkterdata	
+};
+
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+L.control.locate({
+    position: 'topright',  // set the location of the control
+    drawCircle: true,  // controls whether a circle is drawn that shows the uncertainty about the location
+    follow: true,  // follow the user's location
+    setView: true, // automatically sets the map view to the user's location, enabled if `follow` is true
+    keepCurrentZoomLevel: false, // keep the current map zoom level when displaying the user's location. (if `false`, use maxZoom)
+    stopFollowingOnDrag: false, // stop following when the map is dragged if `follow` is true (deprecated, see below)
+    remainActive: false, // if true locate control remains active on click even if the user's location is in view.
+    markerClass: L.circleMarker, // L.circleMarker or L.marker
+    circleStyle: {},  // change the style of the circle around the user's location
+    markerStyle: {},
+    followCircleStyle: {},  // set difference for the style of the circle around the user's location while following
+    followMarkerStyle: {},
+    icon: 'fa fa-map-marker',  // class for icon, fa-location-arrow or fa-map-marker
+    iconLoading: 'fa fa-spinner fa-spin',  // class for loading icon
+    circlePadding: [0, 0], // padding around accuracy circle, value is passed to setBounds
+    metric: true,  // use metric or imperial units
+    onLocationError: function(err) {alert(err.message)},  // define an error callback function
+    onLocationOutsideMapBounds:  function(context) { // called when outside map boundaries
+            alert(context.options.strings.outsideMapBoundsMsg);
+    },
+    showPopup: true, // display a popup when the user click on the inner marker
+    strings: {
+        title: "Show me where I am",  // title of the locate control
+        metersUnit: "meters", // string for metric units
+        feetUnit: "feet", // string for imperial units
+        popup: "You are within {distance} {unit} from this point",  // text to appear if user clicks on circle
+        outsideMapBoundsMsg: "You seem located outside the boundaries of the map" // default message for onLocationOutsideMapBounds
+    },
+    locateOptions: {enableHighAccuracy: true}  // define location options e.g enableHighAccuracy: true or maxZoom: 10
+}).addTo(map);
+
+L.control.scale().addTo(map);
+
+</script>
+</body>
+</html>
